@@ -49,8 +49,8 @@ class Television:
 
     def __str__(self) -> str:
         """Returns a formatted string of the current status, channel, and volume of the TV."""
-        volume_display = 'Muted' if self.__muted else self.__volume
-        return f"Power={'On' if self.__status else 'Off'}, Channel={self.__channel}, Volume={volume_display}"
+        volume_display = '0' if self.__muted else self.__volume
+        return f"Power={'True' if self.__status else 'False'}, Channel={self.__channel}, Volume={volume_display}"
 
     tv = Television()
     print(tv)  # Should print the initial status, channel and volume.
